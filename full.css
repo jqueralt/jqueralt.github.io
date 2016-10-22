@@ -1,0 +1,250 @@
+	/* Disseny original de les divisions i capes: http://bluerobot.com/web/layouts/layout1.html
+	ajudes adicionals a http://glish.com/
+	i http://www.meyerweb.com/eric/css/edge/index.html
+	Modificacions de mides, colors, fonts, fons, etc.: Joan Queralt Gil */ 
+
+body {
+	margin:0px;
+	padding:0px;
+	font-family:verdana, arial, helvetica, sans-serif; color:#505050;
+	background-color:#FFFFFF;
+   cursor: default;
+   scrollbar-base-color:#dee7ec;
+   scrollbar-track-color:#f7f9fa;
+   scrollbar-arrow-color:gold;
+   scrollbar-shadow-color:#8cacbb;
+   scrollbar-face-color:#999999;
+   scrollbar-highlight-color:#dee7ec;
+   scrollbar-dark-shadow-color:#000000;
+   scrollbar-3d-light-color:#8cacbb; 
+   background-image:url('fonslletres.gif')
+	}
+.taula       { font-family: Trebuchet MS,arial,sans-serif; font-size: 10pt }
+h1 {
+	font-family: "Trebuchet MS";
+	padding:0px;
+	font-size:28px;
+	line-height:28px;
+	color:#778899;margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:15px
+	}
+h2 {
+	font-family: "Trebuchet MS";
+	padding:0px;
+	font-size:24px;
+	line-height:24px;
+	color:#778899;margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:15px
+	}
+h3 {
+	font-family: "Trebuchet MS";
+	padding:0px;
+	font-size:20px;
+	line-height:20px;
+	color:#778899;margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:15px
+	}
+h4 {
+	font-family: "Trebuchet MS";
+	padding:0px;
+	font-size:16px;
+	line-height:16px;
+	color:#778899;margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:15px
+	}
+
+p {
+	font:11px/20px verdana, arial, helvetica, sans-serif;
+	margin:0px 0px 16px 0px;
+	padding:0px;
+	}
+#Content>p {margin:0px;}
+#Content>p+p {text-indent:30px;}
+
+a {
+/*	font-size:11px; */
+	text-decoration:none;
+/*	font-weight:600; */
+	font-family:verdana, arial, helvetica, sans-serif;
+	}
+a:link {color:darkorange;}
+a:visited {color:darkorange;}
+a:hover {
+	color:black;
+	background-color:#c0c0c0;}
+
+#Header {
+	margin-left:0px; 
+	margin-right:0px; 
+	margin-top:30px; 
+	margin-bottom:10px; 
+	padding-left:20px; 
+	padding-right:0px; 
+	padding-top:17px; 
+	padding-bottom:0px
+
+	/* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+	height:33px; /* 14px + 17px + 2px = 33px */
+	/* top and bottom borders: 1px; left and right borders: 0px */
+	border-left:0px solid black; 
+	border-right:0px solid black; 
+	border-top:1px solid black; 
+	border-bottom:1px solid black; 
+	line-height:25px;
+	background-color:#909090;
+
+
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:20px; /* the correct height */
+	margin-left:0px; 
+	margin-right:0px; 
+	margin-top:30px; 
+	margin-bottom:10px; 
+	padding-left:20px; 
+	padding-right:0px; 
+	padding-top:17px; 
+	padding-bottom:0px
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#Header {height:14px;}
+
+div#Header a.nav {  
+	color: gold; 
+	font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold}
+
+div#Header a:visited.nav {  
+	color: gold; 
+	font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold}
+
+div#Header a:hover.nav {  
+	font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 	
+	font-style: normal; 
+	font-weight: bold; 
+	color: #fffff0;
+	background-color:#909090;}
+
+
+
+#Content {
+	margin:0px 50px 50px 200px;
+	padding:10px;
+	}
+/* Les taules de Content han de tenir una amplada de 500px */
+
+#Menu {
+	position:absolute;
+	top:100px;
+	left:15px;
+	width:172px;
+	padding:10px;
+	background-color:#909090;
+	border:1px outset #999999;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:150px; 
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menu {width:150px;}
+
+/* div#Menu a {display: block; 
+	color:gold; 	
+	font-size:12px; 
+	text-decoration:none; 
+	font-weight:600; 
+	font-family:verdana, arial, helvetica, sans-serif; } */
+
+div#Menu a.nav {  
+	color: gold; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold}
+
+div#Menu a:visited.nav {  
+	color: gold; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold}
+
+div#Menu a:hover.nav {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 	
+	font-style: normal; 
+	font-weight: bold; 
+	color: #fffff0;
+	background-color:#909090;}
+	
+		/* defineix la part oculta de la divisió Menu */
+
+div#Menu a span {display: none;}
+
+		/* defineix què es veura sota el Menu quan es faci hover */
+
+div#Menu a:hover span {display: block;
+   position: absolute; top: 160px; left: 0; width: 150px;
+   padding: 5px; margin: 0px; z-index: 100;
+   color: #778899; /* background: #909090; */
+   font: 10px Verdana, sans-serif; text-align: left;}
+
+
+
+a.data {  
+	font-size: 10px; 
+	color: #505050; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	
+	}
+
+a:visited.data {  
+	color: #505050; 
+	font-size: 10px; 
+	font-style: normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	 
+	}
+
+a:hover.data {  
+	
+	font-size: 10px; 	
+	font-style: normal; 
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	background-color:#909090;}
+	
+a.index {
+	font-size:11pt;
+	text-decoration:none;
+	font-weight:400; 
+	/* padding:20px;*/
+	font-family:"Trebuchet MS",Arial;
+	}
+a:link.index {color:darkorange;}
+a:visited.index {color:darkorange;}
+a:hover.index {
+	color:black;
+	background-color:#e8e8e8;}
+
+
+.titol {  
+	font-family: "Trebuchet MS",arial; 
+	font-size: 20px; 
+	font-weight: bold; 
+	color: gold}
+	
+li           { font-size: 12px; font-family: "Trebuchet MS",Verdana }
