@@ -1,2 +1,0 @@
-jqueralt.github.io
-==================
